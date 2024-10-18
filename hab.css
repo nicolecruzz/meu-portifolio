@@ -1,0 +1,34 @@
+.conteudo-habilidades {    
+    width: 100%;
+    background-color: var(--fundo-da-aplicação);  
+}
+
+.habilidades_titulo {
+    margin: 30px;
+    font-size: 32px;
+    color: var(--preto-titulo);
+    text-align: center;
+} 
+
+.habilidades-galeria {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 30px;
+}
+
+.habilidades-img {
+    border-radius: 3%;
+    width: 16vw;
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+
+[data-theme="dark"] .conteudo-habilidades {
+    background-color: var(--preto-titulo);
+}
+
+[data-theme="dark"] .habilidades_titulo {
+    color: var(--fundo-da-aplicação);
+}

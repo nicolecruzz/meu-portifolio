@@ -1,0 +1,30 @@
+.conteudo-home img {
+    width: 22%;
+    height: 22%;
+    border-radius: 30%;
+    background-color: var(--fundo-da-aplicação);
+    box-shadow: 10px 10px 20px 0px var(--amarelo-claro);
+}
+[data-theme="dark"] .conteudo-home img  {
+    filter: grayscale(30%);
+}
+
+.icones_links {
+    display: flex;
+    justify-content: center; /* Centraliza os ícones horizontalmente */
+    align-items: center;     /* Centraliza verticalmente (se necessário) */
+    gap: 20px;               /* Espaçamento entre os ícones */
+    margin: 20px;        /* Ajuste conforme necessário para afastar do topo */
+}
+
+.icones img {
+    border-radius: 30%;
+    width: 40px; /* Ajuste o tamanho conforme necessário */
+    height: 40px; /* Ajuste o tamanho conforme necessário */
+}
+
+.icones img:hover {
+    border-radius: 30%;
+    box-shadow: 5px 5px 20px 0px var(--amarelo-claro);
+    cursor: pointer;
+}

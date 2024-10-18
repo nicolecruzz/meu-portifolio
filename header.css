@@ -1,0 +1,89 @@
+#toggle {
+    font-size: 2rem;
+    color: #898484;
+    text-shadow: 2px 2px 4px #000;
+    cursor: pointer;
+    list-style: none;
+}
+
+/* Lâmpada no modo noturno (escala de cinza) */
+html[data-theme="dark"] #toggle {
+    filter: grayscale(100%);
+}
+
+/* Modo Noturno */
+[data-theme="dark"] {
+    --preto-mn: #181818;
+}
+
+[data-theme="dark"] header {
+    background-color: var(--preto-mn);
+}
+
+header {
+    padding: 1.5em 10%;
+    background-color: var(--preto-titulo);
+    color: var(--fundo-da-aplicação);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cabecalho-lista {
+    display: flex;
+    gap: 2em;
+    list-style: none;
+}
+
+.cabecalho-lista a {
+    color: var(--fundo-da-aplicação);
+    line-height: 30px;
+    text-decoration: none;
+}
+
+.cabecalho-lista a:hover {
+    color: var(--amarelo-claro);
+    font-size: 22px;
+}
+
+/* Ícone do menu hambúrguer oculto por padrão */
+#menu-hamburguer {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Media queries para mobile */
+@media (max-width: 720px) {
+    #menu-hamburguer {
+        display: block;
+    }
+
+    /* Oculta o menu completo no mobile e exibe o ícone hambúrguer */
+    .cabecalho-lista {
+        display: none;
+        flex-direction: column;
+        gap: 1em;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: var(--preto-titulo);
+        padding: 20px;
+    }
+
+    /* Quando o menu hambúrguer for ativado, mostrar a lista */
+    .cabecalho-lista.active {
+        display: flex;
+    }
+
+    .cabecalho-lista a {
+        font-size: 18px;
+        padding: 10px;
+        display: block;
+    }
+
+    .cabecalho-lista a:hover {
+        color: var(--amarelo-claro);
+    }
+}

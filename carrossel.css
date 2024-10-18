@@ -1,0 +1,91 @@
+.carrossel {
+    padding: 3em;
+    width: 100%; /* Define a largura do carrossel para 100% do elemento pai. */
+    font-size: 32px; /* Define o tamanho da fonte do texto dentro do carrossel como 32 pixels. */
+    text-align: center; /* Centraliza o texto dentro do carrossel. */
+    background-color: var(--preto-titulo); /* Define a cor de fundo do carrossel usando uma variável CSS. */
+    color: var(--fundo-da-aplicação); /* Define a cor do texto dentro do carrossel usando uma variável CSS. */
+}
+
+[data-theme="dark"] .carrossel {
+      background-color: var(--preto-mn);
+}
+
+.link {
+    padding: 3em;
+    width: 100%;
+    border-radius: 5%;
+    text-decoration: none; /* Remove o sublinhado dos links. */
+    font-size: 20px; /* Define o tamanho da fonte para 30 pixels. */
+    color: var(--fundo-da-aplicação); /* Define a cor do texto do link usando uma variável CSS. */
+}
+
+.icone-animado {
+    width: 30px; /* Define a largura do ícone como 30 pixels. */
+    height: auto; /* Ajusta a altura do ícone automaticamente, mantendo a proporção. */
+    vertical-align: middle; /* Alinha o ícone verticalmente no meio em relação ao texto. */
+    margin-right: 8px; /* Adiciona um espaçamento de 8 pixels à direita do ícone. */
+}
+
+.link:hover {
+    font-size: 22px; /* Aumenta o tamanho da fonte para 34 pixels quando o link é "hovered" (quando o cursor passa por cima). */
+    color: var(--amarelo-claro);
+}
+
+.swiper-slide img {
+    width: 100%; /* Faz com que as imagens dentro do slide ocupem 100% da largura do contêiner. */
+    margin: px 30px; /* Adiciona uma margem de 25 pixels ao redor da imagem. */
+}
+.swiper-slide img {
+    margin-bottom: 0; /* Remove qualquer margem extra inferior das imagens no carrossel, se houver */
+}
+
+.swiper-pagination {
+    position: initial; /* Define a posição inicial da paginação. */
+    margin: .3em 0; /* Adiciona uma margem de 0,3em acima e abaixo da paginação. */
+}
+
+.swiper {
+    width: 100%; /* Define a largura do swiper (carrossel) como 100% do seu elemento pai. */
+    padding: 15px 15px; /* Adiciona um padding de 5 pixels nas bordas internas. */
+}
+
+.swiper-pagination-bullet {
+    background-color: var(--amarelo-claro); /* Cor das bolinhas inativas */
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--amarelo-claro); /* Cor da bolinha ativa, por exemplo amarelo claro */
+}
+
+
+
+@media screen and (min-width: 1024px) {
+    
+    .swiper-pagination {
+    margin: 3em 0 3em 0; /* Define uma margem de 2em em cima e 3em embaixo da paginação para telas maiores (mínimo de 1024px de largura). */
+    }
+    .swiper {
+        width: 80%; /* Define a largura do swiper como 60% para telas maiores (mínimo de 1024px de largura). */
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: block; /* Garante que os botões anterior e próximo do swiper sejam exibidos como bloco. */
+        top: 60%; /* Posiciona os botões a 60% da altura do contêiner do swiper. */
+        color: var(--amarelo-claro);
+    }
+}
+
+@media screen and (min-width: 1728px) {
+    .carrossel__container {
+        display: flex; /* Define o contêiner do carrossel como um contêiner flexível. */
+        margin: 0 30vw 3em 20vw; /* Define margens laterais de 20vw e uma margem inferior de 3em. */
+        align-items: center; /* Alinha os itens do contêiner no centro verticalmente. */
+    }
+    .swiper-pagination {
+        margin: 1em 0; /* Define uma margem de 1em acima e abaixo da paginação. */
+    }
+    .swiper {
+        width: 50%; /* Define a largura do swiper como 50% para telas muito grandes (mínimo de 1728px de largura). */
+    }
+}
