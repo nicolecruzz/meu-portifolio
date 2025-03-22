@@ -1,56 +1,56 @@
 .conteudo-formulario {
-    background-color: var(--preto-titulo);
+    background-color: var(--preto-titulo);  /* Usando variável para fundo */
     padding-top: 120px;
     padding-bottom: 120px;
+    align-items: center;
 }
+
 [data-theme="dark"] .conteudo-formulario {
-    background-color: var(--preto-mn);
+    background-color: var(--preto-mn);  /* Alterando para tema escuro */
 }
 
 .conteudo-formulario h2 {
-    color: var(--fundo-da-aplicação);
+    color: var(--fundo-da-aplicação);  /* Cor do título */
     text-align: center;
+    font-family: var(--fonte-principal);  /* Fonte do título, usando variável */
+    font-size: 2em;
+    margin-bottom: 20px;
 }
 
-.input-container {
+.conteudo-formulario p {
+    font-family: var(--fonte-secundaria);  /* Fonte secundária, usada nos parágrafos */
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    color: var(--fundo-da-aplicação);  /* Cor do texto, utilizando variável */
     display: flex;
-    flex-direction: column;
-    gap: .5em;
-    font-weight: 500;
-    padding-top: 1em;
+    justify-content: center;
 }
 
-input,
-textarea {
-    padding: 1em 1em;
-    border: none;
-    border-radius: 14px;
-    font-family: var(--fonte-secundaria);
-    font-size: 16px;
-    background-color: var(--fundo-da-aplicação);
-    color: var(--preto-titulo);
+.conteudo-formulario a {
+    font-family: var(--fonte-secundaria);  /* Fonte do link */
+    font-weight: bold;
+    color: var(--cor-link);  /* Usando variável para cor do link */
+    text-decoration: none;  /* Sem sublinhado */
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-textarea {
-    height: 200px;
+.conteudo-formulario a:hover {
+    color: var(--amarelo-claro);  /* Cor do link no hover */
+    transform: scale(1.05);  /* Efeito de aumento no hover */
 }
 
-button {
-    display: block;
-    background-color: var(--amarelo-claro);
-    color: var(--fundo-da-aplicação);
-    font-weight: 500;
-    border: none;
-    padding: 1em 2em;
-    font-family: var(--fonte-principal);
-    border-radius: 14px;
-    margin-top: 2em;
-    width: 50%;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.conteudo-formulario a[href*="mailto"] {
+    color: var(--fundo-da-aplicação);  /* Cor específica para o e-mail */
 }
 
-button:hover {
-    opacity: 0.3;
+.conteudo-formulario a[href*="mailto"]:hover {
+    color: var(--amarelo-claro);  /* Cor mais escura para o hover do e-mail */
+}
+
+.conteudo-formulario a[href*="wa.me"] {
+    color: var(--fundo-da-aplicação);  /* Cor específica para WhatsApp */
+}
+
+.conteudo-formulario a[href*="wa.me"]:hover {
+    color: var(--amarelo-claro);  /* Cor mais escura para o hover do WhatsApp */
 }

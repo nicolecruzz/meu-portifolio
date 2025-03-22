@@ -4,11 +4,13 @@
     text-shadow: 2px 2px 4px #000;
     cursor: pointer;
     list-style: none;
+    transition: all 0.02s ease;
 }
 
 /* Lâmpada no modo noturno (escala de cinza) */
 html[data-theme="dark"] #toggle {
     filter: grayscale(100%);
+    transition: transform 0.3s ease-in-out;
 }
 
 /* Modo Noturno */
@@ -27,6 +29,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
 }
 
 .cabecalho-lista {
@@ -51,12 +54,17 @@ header {
     display: none;
     font-size: 2rem;
     cursor: pointer;
+    color: var(--amarelo-claro);
+
 }
 
 /* Media queries para mobile */
 @media (max-width: 720px) {
     #menu-hamburguer {
         display: block;
+        border: none;
+        background: none;
+        outline: none;
     }
 
     /* Oculta o menu completo no mobile e exibe o ícone hambúrguer */

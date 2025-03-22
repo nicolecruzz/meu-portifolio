@@ -1,4 +1,23 @@
-# Ignorar pastas de sistema
+# Ignorar pastas do sistema operacional (Windows, macOS e Linux)
+# Windows
+Thumbs.db
+.DS_Store
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*.swp
+*.swo
+.cache/
+.Trash-*/
+
+# Ignorar arquivos e pastas específicas do usuário
 Ambiente de Impressão/
 Ambiente de Rede/
 Configurações Locais/
@@ -10,3 +29,19 @@ Downloads/
 Videos/
 Músicas/
 
+# Ignorar dependências e arquivos de build (caso use Node.js ou outra tecnologia)
+node_modules/
+dist/
+build/
+vendor/
+.env
+*.log
+
+# Ignorar arquivos de IDEs e editores de código
+.vscode/
+.idea/
+*.code-workspace
+
+# Ignorar configurações do Git
+.git/
+.gitignore

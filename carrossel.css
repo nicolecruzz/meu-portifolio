@@ -12,12 +12,23 @@
 }
 
 .link {
-    padding: 3em;
-    width: 100%;
-    border-radius: 5%;
-    text-decoration: none; /* Remove o sublinhado dos links. */
-    font-size: 20px; /* Define o tamanho da fonte para 30 pixels. */
-    color: var(--fundo-da-aplicação); /* Define a cor do texto do link usando uma variável CSS. */
+    margin: 20px auto; /* Mantém a margem, mas centraliza */
+    padding: 1.5em; /* Reduz o padding para evitar sobreposição */
+    width: 90%; /* Ajusta a largura para melhor responsividade */
+    display: block; /* Garante que o link ocupe toda a largura disponível */
+    text-align: center; /* Centraliza o texto */
+    text-decoration: none; /* Remove o sublinhado */
+    color: var(--fundo-da-aplicação); /* Mantém a cor definida pela variável*/
+    font-size: 20px;
+}
+
+.link:visited {
+    color: var(--fundo-da-aplicação); /* Garante que a cor não mude após o clique */
+}
+
+.link:hover {
+    text-decoration: none; /* Mantém o link sem sublinhado no hover */
+    color: var(--amarelo-claro); /* Muda a cor no hover se desejar */
 }
 
 .icone-animado {
@@ -87,5 +98,16 @@
     }
     .swiper {
         width: 50%; /* Define a largura do swiper como 50% para telas muito grandes (mínimo de 1728px de largura). */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .carrossel__container {
+        margin-bottom: 2em; /* Adiciona espaçamento entre o carrossel e o link */
+    }
+
+    .link {
+        margin-top: 2em; /* Espaço extra acima do link */
+        padding: 1em; /* Ajusta o padding no mobile */
     }
 }

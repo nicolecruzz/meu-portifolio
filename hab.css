@@ -1,29 +1,27 @@
-.conteudo-habilidades {    
+.conteudo-habilidades {   
+    margin: 30px auto; /* Centraliza o conteúdo horizontalmente */
     width: 100%;
-    background-color: var(--fundo-da-aplicação);  
+    max-width: 1200px; /* Limita a largura máxima para melhor responsividade */
+    padding: 50px;
+    font-size: 22px;
+    background-color: var(--fundo-da-aplicacao);  
+    text-align: center; 
 }
 
-.habilidades_titulo {
-    margin: 30px;
+.habilidades-titulo {
+    margin: 20px;
+    padding: 20px;
     font-size: 32px;
     color: var(--preto-titulo);
     text-align: center;
+    font-family: var(--fonte-principal);
 } 
 
-.habilidades-galeria {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin: 30px;
+.ferramentas-descrição {
+    font-size: 22px;
+    color: var(--preto-titulo);
+    text-align: center;
 }
-
-.habilidades-img {
-    border-radius: 3%;
-    width: 16vw;
-    height: auto; /* Mantém a proporção da imagem */
-}
-
 
 [data-theme="dark"] .conteudo-habilidades {
     background-color: var(--preto-titulo);
@@ -32,3 +30,8 @@
 [data-theme="dark"] .habilidades_titulo {
     color: var(--fundo-da-aplicação);
 }
+
+[data-theme="dark"] .ferramentas_descrição {
+    color: var(--fundo-da-aplicação);
+    
+} 
