@@ -31,26 +31,23 @@
 </header>
 
 <main>
+    
     <section class="conteudo-home" id="home">
         <div>
             <h2 class="home-titulo">Hello world!<br /></h2>
             <p>Boas-vindas ao meu portfólio! 😊 <br />
-    
                 Sou Nicole, tenho 33 anos e já explorei diversas áreas ao longo da minha trajetória. 
                 Sou formada em design de interiores, e também estudei fotografia e marketing voltados para o universo da barbearia.
-                
-               <p> Atualmente, gerencio o marketing da <b>Império Barbearia</b> e contribuo também na criação da <b>Lojahu!.</b>
-                
-                <p>Recentemente, concluí meus estudos em Front-end, UX/UI, Customer Success (CS), vendas de alta performance e identidade visual. Esses cursos ampliaram minha visão e me ajudaram a aprimorar minhas habilidades estratégicas e de planejamento.</p>
-                
-                <p> Este portfólio reflete meu crescimento pessoal e profissional.</p>
-                <b><p>Acompanhe minha jornada! 🚀</p></b>
-                
-            
+            </p>
+            <p> Atualmente, gerencio o marketing da <b>Império Barbearia</b> e contribuo também na criação da <b>Lojahu!.</b></p>
+            <p>Recentemente, concluí meus estudos em Front-end, UX/UI, Customer Success (CS), vendas de alta performance e identidade visual. Esses cursos ampliaram minha visão e me ajudaram a aprimorar minhas habilidades estratégicas e de planejamento.</p>
+            <p>Este portfólio reflete meu crescimento pessoal e profissional.</p>
+            <b><p>Acompanhe minha jornada! 🚀</p></b>
+            <img src="./imagens/Nicole.png" alt="Foto de Nicole" />
         </div>
-        <img src="./imagens/Nicole.png" alt="Foto de Nicole" />
     </section>
-
+    
+    <!-- Ícones de redes sociais com espaçamento -->
     <div class="icones_links">
         <a class="icones" href="https://linkedin.com/in/nicole-cruzz/" target="_blank" aria-label="LinkedIn">
             <img src="./imagens/linkedin.png" alt="LinkedIn">
@@ -62,6 +59,8 @@
             <img src="./imagens/github.png" alt="GitHub">
         </a>
     </div>
+    
+
 
     <section class="carrossel" id="formacoes">
         <h2>Formações</h2>
@@ -126,13 +125,12 @@
 
 </section>
 
-
 <script src="js.js"></script> <!-- Link para o arquivo JS externo -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
     const swiper = new Swiper('.swiper', {
         loop: true,
-        slidesPerView: 3,
+        slidesPerView: 1,  // Exibe 1 item por vez no PC
         spaceBetween: 3,
         pagination: {
             el: '.swiper-pagination',
@@ -142,8 +140,16 @@
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
+        breakpoints: {
+            // Quando a tela for 768px ou menor, exibe 3 itens por vez (versão mobile)
+            768: {
+                slidesPerView: 3,
+            },
+        },
     });
 </script>
+
+
 
 </body>
 </html>

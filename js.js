@@ -16,3 +16,4 @@ const menuLista = document.querySelector('.cabecalho-lista');
 menuHamburguer.addEventListener('click', () => {
     menuLista.classList.toggle('active');
 });
+
